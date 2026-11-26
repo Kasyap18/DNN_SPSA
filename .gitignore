@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/
+tmp/
+spsa/
+outputs/cleanup_backup.zip
+.env
+.env.*

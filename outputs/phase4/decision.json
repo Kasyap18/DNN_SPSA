@@ -1,0 +1,30 @@
+﻿{
+    "recommended_change":  "MNIST paper-style SPSA coefficient a: 0.1 to 0.001",
+    "unchanged":  [
+                      "c=0.1",
+                      "alpha=1",
+                      "gamma=1/6",
+                      "50 inner steps",
+                      "reset per block call",
+                      "bottom_up",
+                      "split_bias=True",
+                      "tanh output",
+                      "one-hot squared-error loss",
+                      "12 epochs",
+                      "batch size 128"
+                  ],
+    "screening_record":  "experiments.json",
+    "confirmation_record":  "stability_confirmation.json",
+    "recommended_checkpoint":  "mnist_lr_0.001.npz",
+    "accuracy_candidate_checkpoint":  "mnist_selected.npz",
+    "note":  "mnist_selected.npz is the a=0.01 screening accuracy candidate, not the final recommendation",
+    "baseline_notebook_modified":  false,
+    "limitations":  [
+                        "One initialization and optimizer seed",
+                        "Three-epoch screening on 1600 training and 400 validation examples",
+                        "Two preselected candidates confirmed on 2000 training and 1000 test examples",
+                        "No activation/loss replacement or holistic ablation tested",
+                        "Small loss increase in final epoch"
+                    ],
+    "next_phase":  "Compare SPSA against Adam/SGD only after user instruction"
+}
